@@ -1,0 +1,76 @@
+<div id="wrapper">
+  <div class="phase-banner d-print-none">
+    <span class="phase-banner__tag">
+      Beta
+    </span>
+    <span>
+      Toto je nova sluzba – vas <a href="#">nazor</a> nam pomuze ji zlepsit.
+    </span>
+  </div>
+
+  <nav class="breadcrumbs" aria-label="breadcrumbs" role="Navigation">
+    <ol>
+      <li class="breadcrumbs__item">
+        <a href="#">Domů</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="#">Přihlásit se</a>
+      </li>
+      <li class="breadcrumbs__item breadcrumbs__item--active">
+        <a aria-current="page">Vytvoření nového účtu</a>
+      </li>
+    </ol>
+  </nav>
+
+  <main id="content" class="" role="main">    
+    <div class="row">
+      <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+        <h1 class="heading-xl form-title">Vytvoření nového účtu</h1>
+        <form>
+          <div class="form-group">
+            <label for="username">E-mailová adresa
+              <span class="form-required" title="Toto pole je povinne">(povinné)</span>
+            </label>
+            <input type="email" class="form-control" data-validate="required" id="username" value="" autocapitalize="none">
+            <div class="form-group__hint">Bude potřeba pro přihlášení</div>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Vytvořit heslo
+              <span class="form-required" title="Toto pole je povinne">(povinné)</span>
+              <span class="form-group__placeholder">Musí mít minimálně 6 znaků</span>
+            </label>
+            <input type="password" class="form-control" id="exampleInputPassword1" value="">
+          </div>
+
+          <div class="form-group__terms-note">
+            <a title="Podminky uziti, otevre se v novem okne" href="terms" target="_blank"> Podmínky užití
+              <span class="visually-hidden">otevře se v novém okně</span>
+            </a>
+          </div>
+
+          <div class="form-group">              
+            <label class="form-check-label" for="exampleCheck1"> 
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            Souhlasím s podmínkami užití
+            </label>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Pokračovat</button>  
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script type="text/javascript">
+  $("input[type='checkbox']").change(function() {
+    if($(this).is(":checked")) {
+      $(this).parent().addClass("checked");
+    } else {
+      $(this).parent().removeClass("checked");
+    }
+  }).change();
+</script>

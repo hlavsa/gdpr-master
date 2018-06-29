@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <title>Gdpr</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="skip-container">
+      <div id="skip">
+        <a class="skiplink" href="#startcontent" title="Preskocit na obsah stranky" accesskey="s">Preskocit na obsah stranky</a>
+      </div>
+    </div>
+
+    <%= render 'shared/navbar' %>
+
+    <%= yield %>
+
+    <%= render 'shared/footer' %>
+  </body>
+</html>
